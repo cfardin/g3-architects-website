@@ -10,6 +10,9 @@
 
 /* Shared styles */
 
+.gray_images{
+    filter: grayscale(100%);
+}
 
 .display_flex{
     display: flex;
@@ -130,6 +133,52 @@ main > section{
     margin-bottom: 34px;
 }
 
+/*  */
+/* feature section related style */
+/*  */
+
+.features_section{
+    gap: 140px ;
+}
+
+#feature_section_title{
+    border-left: 5px solid #FF900E;
+    padding-left: 21px;
+}
+
+.feature_card .feature_title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.feature_card{
+    padding: 30px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+
+#experience_badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#experience_year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.feature_image img{
+    width: 100%;
+}
+
+
+
+
 /* some facts related styles */
 
 .facts_container{
@@ -164,7 +213,24 @@ main > section{
 
 .some_facts p{
     max-width: 542px;
+    margin-bottom: 100px;
 }
+
+
+
+/* sponsor related styles */
+.sponsors_info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor_companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
 
 
 
@@ -172,25 +238,65 @@ main > section{
 @media screen  and (max-width: 576px){
     .navbar, 
     .nav_link, 
-    .teams{
+    .teams,
+    .features_section{
         flex-direction: column;
     }
 
-    .team_images{
+    .team_images,
+    .facts_container,
+    .sponsor_companies{
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .facts_container{
+        justify-items: center;
+        gap: 24px;
+    }
     .features{
         margin-left: 20px;
     }
+
+    #experience_badge{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .sponsor_companies{
+        justify-items: center;
+        gap: 50px;
+    }
+
+    #experience_badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+
+
 }
+
+
 
 /* medium size devise  */
 @media screen  and (min-width: 576px) and (max-width:992px){
-    .teams{
+    .teams, .features_section{
         flex-direction: column;
     }
     .features{
         margin: 50px auto;
+    }
+
+    .facts_container,
+    .sponsor_companies{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+     #experience_badge{
+        margin-top: 20px;
+        margin-left: 20px;
     }
 }
