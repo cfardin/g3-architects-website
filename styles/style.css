@@ -10,6 +10,10 @@
 
 /* Shared styles */
 
+body{
+    margin: 0;
+}
+
 .gray_images{
     filter: grayscale(100%);
 }
@@ -231,6 +235,21 @@ main > section{
 }
 
 
+/* footer section */
+footer{
+    max-width: 1440px;
+    background-color: #FFF4E7;
+    margin: 130px auto 216px;
+    border-radius: 8px;
+}
+
+footer p{
+    font-size: 1.25rem;
+    padding-top: 39px;
+    padding-bottom: 38px;
+    text-align: center;
+    align-items: center;
+}
 
 
 
@@ -298,5 +317,6 @@ main > section{
      #experience_badge{
         margin-top: 20px;
         margin-left: 20px;
+        
     }
 }
